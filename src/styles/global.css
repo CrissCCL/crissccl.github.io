@@ -96,3 +96,21 @@ h2{ margin:0; font-size:1.35rem; }
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
+
+.impact{
+  margin: 10px 0 0;
+  font-weight: 650;
+  color: rgba(229,231,235,.92);
+}
+
+.bullets{
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: .92rem;
+  line-height: 1.45;
+}
+
+.bullets li{
+  margin: 6px 0;
+}

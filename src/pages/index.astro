@@ -8,65 +8,22 @@ const links = {
 };
 
 const projects = [
-  {
-    title: "DIY UAV — Fly-by-Wire Testbed",
-    desc: "Complete embedded flight-control platform with sensing, actuation and custom PCBs.",
-    tags: [
-      { name: "Embedded", icon: "devicon-cplusplus-plain" },
-      { name: "Teensy" },
-      { name: "Control" }
-    ],
-    url: "https://github.com/CrissCCL/DIY_UAV",
-  },
-  {
-    title: "Temperature Control Module",
-    desc: "Real-time process control with GUI and instrumentation.",
-    tags: [
-      { name: "Python", icon: "devicon-python-plain" },
-      { name: "Arduino", icon: "devicon-arduino-plain" },
-      { name: "Control" }
-    ],
-    url: "https://github.com/CrissCCL/Temp_ControlMod",
-  },
-  {
-    title: "ROS 2 Humble Integration",
-    desc: "Telemetry bridge using Raspberry Pi + ROS 2.",
-    tags: [
-      { name: "ROS2" },
-      { name: "Python", icon: "devicon-python-plain" },
-      { name: "Linux", icon: "devicon-linux-plain" }
-    ],
-    url: "https://github.com/CrissCCL/Temp_ControlMod_ROS_integration",
-  },
-  {
-    title: "UAV Power Stage PCB",
-    desc: "Custom power electronics and regulation board.",
-    tags: [
-      { name: "KiCad" },
-      { name: "PCB" },
-      { name: "Hardware" }
-    ],
-    url: "https://github.com/CrissCCL/UAV_PowerStage",
-  },
-  {
-    title: "Digital Control & ARX Identification",
-    desc: "System modeling and control design in MATLAB.",
-    tags: [
-      { name: "MATLAB" },
-      { name: "System ID" }
-    ],
-    url: "https://github.com/CrissCCL/Digital_ControlSimARX",
-  },
-  {
-    title: "Flotation Column Control — LabVIEW HMI",
-    desc: "Industrial SCADA-style interface and MIMO PID control.",
-    tags: [
-      { name: "LabVIEW" },
-      { name: "PID" },
-      { name: "Industrial" }
-    ],
-    url: "https://github.com/CrissCCL/FLotation_Column_control_HMI",
-  },
+{
+  title: "DIY UAV — Fly-by-Wire Testbed",
+  desc: "Complete embedded flight-control platform with sensing, actuation and custom PCBs.",
+  impact: "End-to-end UAV platform for real-time control experimentation and validation.",
+  highlights: [
+    "Dual-IMU architecture evaluation and failover logic",
+    "Real-time control loops + telemetry + logging pipeline",
+    "Custom PCBs for flight control stage and power stage"
+  ],
+  tags: [
+    { name: "Embedded", icon: "devicon-cplusplus-plain" },
+    { name: "Teensy" },
+    { name: "Control" }
+  ],
+  url: "https://github.com/CrissCCL/DIY_UAV",
+},
 ];
 
 
@@ -155,6 +112,11 @@ const projects = [
               </div>
 
               <p class="muted">{p.desc}</p>
+              <p class="impact">{p.impact}</p>
+
+              <ul class="bullets">
+                {p.highlights?.map((h) => <li>{h}</li>)}
+              </ul>
 
               <div class="tags">
                 {p.tags.map((t) => (
