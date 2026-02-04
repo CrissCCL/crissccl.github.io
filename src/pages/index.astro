@@ -8,23 +8,110 @@ const links = {
 };
 
 const projects = [
-{
-  title: "DIY UAV — Fly-by-Wire Testbed",
-  desc: "Complete embedded flight-control platform with sensing, actuation and custom PCBs.",
-  impact: "End-to-end UAV platform for real-time control experimentation and validation.",
-  highlights: [
-    "Dual-IMU architecture evaluation and failover logic",
-    "Real-time control loops + telemetry + logging pipeline",
-    "Custom PCBs for flight control stage and power stage"
-  ],
-  tags: [
-    { name: "Embedded", icon: "devicon-cplusplus-plain" },
-    { name: "Teensy" },
-    { name: "Control" }
-  ],
-  url: "https://github.com/CrissCCL/DIY_UAV",
-},
+
+  {
+    title: "DIY UAV — Fly-by-Wire Testbed",
+    desc: "Complete embedded flight-control platform with sensing, actuation and custom PCBs.",
+    impact: "End-to-end UAV platform for real-time control experimentation and validation.",
+    highlights: [
+      "Dual-IMU architecture with sensor failover and fusion",
+      "Real-time control loops and telemetry pipeline",
+      "Custom KiCad PCBs for flight control and power distribution"
+    ],
+    tags: [
+      { name: "Embedded", icon: "devicon-cplusplus-plain" },
+      { name: "Teensy" },
+      { name: "Control" }
+    ],
+    url: "https://github.com/CrissCCL/DIY_UAV",
+  },
+
+  {
+    title: "Temperature Control Module",
+    desc: "Real-time process control with GUI and instrumentation.",
+    impact: "Industrial-style thermal process platform for control tuning and experimentation.",
+    highlights: [
+      "PID/PI digital controllers implemented on embedded hardware",
+      "Live GUI visualization + logging + serial telemetry",
+      "End-to-end system identification and closed-loop validation"
+    ],
+    tags: [
+      { name: "Python", icon: "devicon-python-plain" },
+      { name: "Arduino", icon: "devicon-arduino-plain" },
+      { name: "Control" }
+    ],
+    url: "https://github.com/CrissCCL/Temp_ControlMod",
+  },
+
+  {
+    title: "ROS 2 Humble Integration",
+    desc: "Telemetry bridge using Raspberry Pi + ROS 2.",
+    impact: "Edge-to-cloud communication layer between embedded controller and robotics framework.",
+    highlights: [
+      "UART bridge for real-time telemetry and commands",
+      "ROS 2 nodes for streaming, logging and remote control",
+      "Raspberry Pi deployment for field-ready operation"
+    ],
+    tags: [
+      { name: "ROS2" },
+      { name: "Python", icon: "devicon-python-plain" },
+      { name: "Linux", icon: "devicon-linux-plain" }
+    ],
+    url: "https://github.com/CrissCCL/Temp_ControlMod_ROS_integration",
+  },
+
+  {
+    title: "UAV Power Stage PCB",
+    desc: "Custom power electronics and regulation board.",
+    impact: "Modular power architecture improving reliability and electrical isolation in UAV systems.",
+    highlights: [
+      "High-side smart switching with BTS50005 protection",
+      "Buck regulation for low-voltage electronics and sensors",
+      "Custom KiCad design with EMI-aware layout and grounding"
+    ],
+    tags: [
+      { name: "KiCad" },
+      { name: "PCB" },
+      { name: "Hardware" }
+    ],
+    url: "https://github.com/CrissCCL/UAV_PowerStage",
+  },
+
+  {
+    title: "Digital Control & ARX Identification",
+    desc: "System modeling and control design in MATLAB.",
+    impact: "Industrial-style workflow for data-driven modeling and controller design.",
+    highlights: [
+      "ARX/ARMAX/BJ model identification from real plant data",
+      "Closed-loop PI/PID tuning and robustness analysis",
+      "Simulation-to-experiment validation pipeline"
+    ],
+    tags: [
+      { name: "MATLAB" },
+      { name: "System ID" }
+    ],
+    url: "https://github.com/CrissCCL/Digital_ControlSimARX",
+  },
+
+  {
+    title: "Flotation Column Control — LabVIEW HMI",
+    desc: "Industrial SCADA-style interface and MIMO PID control.",
+    impact: "Supervisory control system for pilot-scale mineral processing experiments.",
+    highlights: [
+      "Decoupled MIMO PID control strategy",
+      "LabVIEW HMI for monitoring, alarms and actuation",
+      "Industrial-style data acquisition and supervision"
+    ],
+    tags: [
+      { name: "LabVIEW" },
+      { name: "PID" },
+      { name: "Industrial" }
+    ],
+    url: "https://github.com/CrissCCL/FLotation_Column_control_HMI",
+  }
+
 ];
+
 
 
 
