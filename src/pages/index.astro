@@ -1,4 +1,6 @@
 ---
+import "../styles/global.css";
+
 const links = {
   github: "https://github.com/CrissCCL",
   youtube: "https://www.youtube.com/@CrissCCL_eng",
@@ -7,42 +9,12 @@ const links = {
 };
 
 const projects = [
-  {
-    title: "DIY UAV Platform",
-    desc: "Embedded flight control testbed (Teensy) + sensing + actuation.",
-    tags: ["UAV", "Teensy 4.x", "Control", "Embedded"],
-    url: "https://github.com/CrissCCL/DIY_UAV",
-  },
-  {
-    title: "Temp Control Module",
-    desc: "Instrumentation + real-time PID control + logging + GUI.",
-    tags: ["Control", "Instrumentation", "GUI", "Embedded"],
-    url: "https://github.com/CrissCCL/Temp_ControlMod",
-  },
-  {
-    title: "ROS 2 Humble UART Bridge",
-    desc: "Telemetry bridge between embedded controller and ROS 2 via UART.",
-    tags: ["ROS2", "Python", "Raspberry Pi", "UART"],
-    url: "https://github.com/CrissCCL",
-  },
-  {
-    title: "UAV Power Distribution Board",
-    desc: "High-side switching + buck regulation + modular power stage PCB.",
-    tags: ["KiCad", "Power", "PCB", "UAV"],
-    url: "https://github.com/CrissCCL",
-  },
-  {
-    title: "Closed-loop Identification & PI",
-    desc: "Industrial-style identification + PI tuning and validation workflow.",
-    tags: ["System ID", "PI", "MATLAB", "Industrial"],
-    url: "https://github.com/CrissCCL",
-  },
-  {
-    title: "Flotation Column Control (LabVIEW HMI)",
-    desc: "Supervisory GUI + decoupled MIMO PID control (thesis project).",
-    tags: ["LabVIEW", "MIMO", "PID", "HMI/SCADA"],
-    url: "https://github.com/CrissCCL",
-  },
+  { title: "DIY UAV Platform", desc: "Teensy flight control testbed + sensing + actuation.", tags: ["UAV", "Teensy 4.x", "Control"], url: "https://github.com/CrissCCL/DIY_UAV" },
+  { title: "Temp Control Module", desc: "Instrumentation + real-time PID + logging + GUI.", tags: ["Control", "Instrumentation", "GUI"], url: "https://github.com/CrissCCL/Temp_ControlMod" },
+  { title: "ROS 2 UART Bridge", desc: "Telemetry bridge between embedded controller and ROS 2.", tags: ["ROS2", "Python", "UART"], url: "https://github.com/CrissCCL" },
+  { title: "UAV Power Stage PCB", desc: "High-side switching + buck regulation + modular power board.", tags: ["KiCad", "Power", "PCB"], url: "https://github.com/CrissCCL" },
+  { title: "Closed-loop ID & PI", desc: "Industrial-style identification + PI tuning workflow.", tags: ["System ID", "PI", "MATLAB"], url: "https://github.com/CrissCCL" },
+  { title: "Flotation Column HMI", desc: "LabVIEW supervisory GUI + decoupled MIMO PID control.", tags: ["LabVIEW", "MIMO", "PID"], url: "https://github.com/CrissCCL" },
 ];
 ---
 
@@ -52,17 +24,14 @@ const projects = [
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>CrissCCL — Portfolio</title>
     <meta name="description" content="Portafolio técnico: Control, Instrumentación, Embedded Systems, UAV/Robotics." />
-    <link rel="stylesheet" href="/styles/global.css" />
   </head>
 
   <body>
     <header class="hero">
       <div class="wrap">
         <p class="kicker">CrissCCL</p>
-        <h1>Control & Instrumentation · Embedded Systems · UAV / Robotics</h1>
-        <p class="lead">
-          Hub para visualizar rápido proyectos reales: PCBs, control, instrumentación y software embebido.
-        </p>
+        <h1>Control · Instrumentación · Embedded · UAV/Robotics</h1>
+        <p class="lead">Portafolio técnico para revisión rápida: proyectos reales con evidencia (código, PCBs, videos).</p>
 
         <div class="cta">
           <a class="btn" href="#projects">Ver proyectos</a>
@@ -70,25 +39,38 @@ const projects = [
           <a class="btn ghost" href={links.youtube} target="_blank" rel="noreferrer">YouTube</a>
           <a class="btn ghost" href={links.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
+
+        <div class="mini">
+          <span>📍 Chile</span>
+          <span>🛠️ Control / I&amp;C / Embedded</span>
+          <span>📩 <a href={`mailto:${links.email}`}>{links.email}</a></span>
+        </div>
       </div>
     </header>
 
     <main class="wrap">
       <section id="projects">
-        <h2>Featured Projects</h2>
-        <p class="section-lead">Selección curada para revisión rápida (6–8).</p>
+        <div class="sectionHead">
+          <h2>Featured Projects</h2>
+          <p class="muted">6 proyectos curados (lo mejor primero).</p>
+        </div>
 
         <div class="grid">
           {projects.map((p) => (
             <a class="card" href={p.url} target="_blank" rel="noreferrer">
-              <div class="cardBody">
+              <div class="cardTop">
+                <div class="dot" aria-hidden="true"></div>
                 <h3>{p.title}</h3>
-                <p class="muted">{p.desc}</p>
-                <div class="tags">
-                  {p.tags.map((t) => (
-                    <span class="tag">{t}</span>
-                  ))}
-                </div>
+              </div>
+
+              <p class="muted">{p.desc}</p>
+
+              <div class="tags">
+                {p.tags.map((t) => <span class="tag">{t}</span>)}
+              </div>
+
+              <div class="cardBottom">
+                <span class="link">Ver en GitHub →</span>
               </div>
             </a>
           ))}
@@ -96,12 +78,15 @@ const projects = [
       </section>
 
       <section id="contact">
-        <h2>Contacto</h2>
-        <p class="muted">
-          Para oportunidades en Instrumentación, Control, Monitoreo Remoto, Embedded o Robótica.
-        </p>
+        <div class="sectionHead">
+          <h2>Contacto</h2>
+          <p class="muted">Oportunidades en Instrumentación/Control, Monitoreo Remoto, Embedded, Robótica.</p>
+        </div>
+
         <div class="contact">
           <a href={links.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href={links.github} target="_blank" rel="noreferrer">GitHub</a>
+          <a href={links.youtube} target="_blank" rel="noreferrer">YouTube</a>
           <a href={`mailto:${links.email}`}>Correo</a>
         </div>
       </section>
