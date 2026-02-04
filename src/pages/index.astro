@@ -1,11 +1,114 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+const links = {
+  github: "https://github.com/CrissCCL",
+  youtube: "https://www.youtube.com/@CrissCCL_eng",
+  linkedin: "https://www.linkedin.com/in/cristianccl/",
+  email: "TU_CORREO_AQUI",
+};
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const projects = [
+  {
+    title: "DIY UAV Platform",
+    desc: "Embedded flight control testbed (Teensy) + sensing + actuation.",
+    tags: ["UAV", "Teensy 4.x", "Control", "Embedded"],
+    url: "https://github.com/CrissCCL/DIY_UAV",
+  },
+  {
+    title: "Temp Control Module",
+    desc: "Instrumentation + real-time PID control + logging + GUI.",
+    tags: ["Control", "Instrumentation", "GUI", "Embedded"],
+    url: "https://github.com/CrissCCL/Temp_ControlMod",
+  },
+  {
+    title: "ROS 2 Humble UART Bridge",
+    desc: "Telemetry bridge between embedded controller and ROS 2 via UART.",
+    tags: ["ROS2", "Python", "Raspberry Pi", "UART"],
+    url: "https://github.com/CrissCCL",
+  },
+  {
+    title: "UAV Power Distribution Board",
+    desc: "High-side switching + buck regulation + modular power stage PCB.",
+    tags: ["KiCad", "Power", "PCB", "UAV"],
+    url: "https://github.com/CrissCCL",
+  },
+  {
+    title: "Closed-loop Identification & PI",
+    desc: "Industrial-style identification + PI tuning and validation workflow.",
+    tags: ["System ID", "PI", "MATLAB", "Industrial"],
+    url: "https://github.com/CrissCCL",
+  },
+  {
+    title: "Flotation Column Control (LabVIEW HMI)",
+    desc: "Supervisory GUI + decoupled MIMO PID control (thesis project).",
+    tags: ["LabVIEW", "MIMO", "PID", "HMI/SCADA"],
+    url: "https://github.com/CrissCCL",
+  },
+];
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CrissCCL — Portfolio</title>
+    <meta name="description" content="Portafolio técnico: Control, Instrumentación, Embedded Systems, UAV/Robotics." />
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+
+  <body>
+    <header class="hero">
+      <div class="wrap">
+        <p class="kicker">CrissCCL</p>
+        <h1>Control & Instrumentation · Embedded Systems · UAV / Robotics</h1>
+        <p class="lead">
+          Hub para visualizar rápido proyectos reales: PCBs, control, instrumentación y software embebido.
+        </p>
+
+        <div class="cta">
+          <a class="btn" href="#projects">Ver proyectos</a>
+          <a class="btn ghost" href={links.github} target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn ghost" href={links.youtube} target="_blank" rel="noreferrer">YouTube</a>
+          <a class="btn ghost" href={links.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section id="projects">
+        <h2>Featured Projects</h2>
+        <p class="section-lead">Selección curada para revisión rápida (6–8).</p>
+
+        <div class="grid">
+          {projects.map((p) => (
+            <a class="card" href={p.url} target="_blank" rel="noreferrer">
+              <div class="cardBody">
+                <h3>{p.title}</h3>
+                <p class="muted">{p.desc}</p>
+                <div class="tags">
+                  {p.tags.map((t) => (
+                    <span class="tag">{t}</span>
+                  ))}
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contacto</h2>
+        <p class="muted">
+          Para oportunidades en Instrumentación, Control, Monitoreo Remoto, Embedded o Robótica.
+        </p>
+        <div class="contact">
+          <a href={links.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href={`mailto:${links.email}`}>Correo</a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p class="muted">© {new Date().getFullYear()} CrissCCL</p>
+      </footer>
+    </main>
+  </body>
+</html>
