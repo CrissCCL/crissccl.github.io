@@ -68,9 +68,10 @@ h2{ margin:0; font-size:1.35rem; }
 }
 
 .about{
-  margin-top:40px;
-  max-width:900px;
+  border-top: 1px solid var(--line);
 }
+
+
 .stackGrid{
   display:flex;
   flex-wrap:wrap;
@@ -84,4 +85,14 @@ h2{ margin:0; font-size:1.35rem; }
   padding:6px 12px;
   border-radius:999px;
   font-size:.9rem;
+}
+
+.about p{
+  max-width: 720px;
+  line-height: 1.6;
+}
+
+.about h2{
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
