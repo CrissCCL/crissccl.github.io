@@ -61,3 +61,8 @@ h2{ margin:0; font-size:1.35rem; }
 }
 .contact a:hover{ border-color: rgba(96,165,250,.55); }
 .footer{ border-top:1px solid var(--line); margin-top:34px; padding:18px 0 10px; }
+.tag i{
+  font-size: 14px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
