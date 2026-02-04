@@ -66,3 +66,8 @@ h2{ margin:0; font-size:1.35rem; }
   margin-right: 6px;
   vertical-align: middle;
 }
+
+.about{
+  margin-top:40px;
+  max-width:900px;
+}
