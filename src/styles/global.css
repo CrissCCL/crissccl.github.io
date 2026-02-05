@@ -114,3 +114,20 @@ h2{ margin:0; font-size:1.35rem; }
 .bullets li{
   margin: 6px 0;
 }
+
+.heroStack{
+  margin-top: 20px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center; /* 🔥 centra visualmente */
+}
+
+.heroStack span{
+  font-size:.8rem;
+  padding:4px 10px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:rgba(2,6,23,.25);
+  color:var(--muted);
+}
