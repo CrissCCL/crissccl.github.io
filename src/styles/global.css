@@ -195,3 +195,28 @@ h2{ margin:0; font-size:1.35rem; }
 .card:hover .overlay{
   opacity:1;
 }
+.hero{
+  position: relative; /* necesario */
+  overflow: hidden;
+}
+
+/* avatar grande de fondo */
+.heroAvatar{
+  position:absolute;
+
+  right: -80px;     /* mueve a la derecha */
+  bottom: -40px;
+
+  height: 520px;    /* tamaño grande */
+  opacity: 0.07;    /* 🔥 super tenue */
+
+  pointer-events:none;
+  user-select:none;
+  z-index:0;
+}
+
+/* contenido encima */
+.hero .wrap{
+  position: relative;
+  z-index: 1;
+}
