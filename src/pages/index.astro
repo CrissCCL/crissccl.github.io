@@ -89,7 +89,8 @@ const projects = [
       "Simulation-to-experiment validation"
     ],
     tags: [
-      { name: "MATLAB" }
+      { name: "MATLAB" },
+      { name: "Python", icon: "devicon-python-plain" }
     ],
     url: "https://github.com/CrissCCL/Digital_ControlSimARX",
   },
@@ -174,7 +175,14 @@ const projects = [
           {projects.map((p) => (
             <a class="card" href={p.url} target="_blank" rel="noreferrer">
               {p.thumb && (
-                <img class="thumb" src={p.thumb} alt={`${p.title} thumbnail`} loading="lazy" />
+                <div class="thumbWrap">
+                  <img class="thumb" src={p.thumb} />
+
+                  <div class="overlay">
+                    View Project →
+                  </div>
+                </div>
+
               )}
 
               <div class="cardTop">
