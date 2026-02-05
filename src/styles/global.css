@@ -8,7 +8,8 @@
   --text:#e5e7eb;
   --muted:#a1a1aa;
   --line:#1f2937;
-  --accent:#60a5fa;
+  --accent: #60a5fa;      /* botones */
+  --link: #93c5fd;        /* links más suave */
 }
 
 *{ box-sizing:border-box; }
@@ -247,4 +248,15 @@ h1{
   border-top:1px solid var(--line);
   text-align:center;
   color:var(--muted);
+}
+
+/* links normales (texto) */
+a:not(.card):not(.btn){
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:not(.card):not(.btn):hover{
+  color: var(--accent);
+  text-decoration: underline;
 }
