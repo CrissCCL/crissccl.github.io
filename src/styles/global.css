@@ -43,7 +43,7 @@ h2{ margin:0; font-size:1.35rem; }
   margin-top:16px;
 
   /* ⭐ magia responsive */
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
 }
 
 .card{
