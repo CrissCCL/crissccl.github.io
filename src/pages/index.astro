@@ -15,13 +15,12 @@ const projects = [
     desc: "Complete embedded flight-control platform with sensing, actuation and custom PCBs.",
     impact: "End-to-end UAV platform for real-time control experimentation and validation.",
     highlights: [
-      "Dual-IMU architecture with sensor failover and fusion",
+      "Dual-IMU architecture with failover and fusion",
       "Real-time control loops and telemetry pipeline",
-      "Custom KiCad PCBs for flight control and power distribution"
+      "Custom KiCad PCBs for flight control and power stage"
     ],
     tags: [
       { name: "Embedded", icon: "devicon-cplusplus-plain" },
-      { name: "Teensy" },
       { name: "Control" }
     ],
     url: "https://github.com/CrissCCL/DIY_UAV",
@@ -31,15 +30,14 @@ const projects = [
     title: "Temperature Control Module",
     thumb: "/img/temp.png",
     desc: "Real-time process control with GUI and instrumentation.",
-    impact: "Industrial-style thermal process platform for control tuning and experimentation.",
+    impact: "Industrial-style thermal platform for control tuning and experimentation.",
     highlights: [
-      "PID/PI digital controllers implemented on embedded hardware",
-      "Live GUI visualization + logging + serial telemetry",
-      "End-to-end system identification and closed-loop validation"
+      "Digital PID/PI controllers",
+      "Live GUI + telemetry logging",
+      "Closed-loop validation tests"
     ],
     tags: [
       { name: "Python", icon: "devicon-python-plain" },
-      { name: "Arduino", icon: "devicon-arduino-plain" },
       { name: "Control" }
     ],
     url: "https://github.com/CrissCCL/Temp_ControlMod",
@@ -47,16 +45,16 @@ const projects = [
 
   {
     title: "ROS 2 Humble Integration",
+    thumb: "/img/ros.png",
     desc: "Telemetry bridge using Raspberry Pi + ROS 2.",
-    impact: "Edge-to-cloud communication layer between embedded controller and robotics framework.",
+    impact: "Embedded-to-ROS communication layer for robotics experiments.",
     highlights: [
-      "UART bridge for real-time telemetry and commands",
-      "ROS 2 nodes for streaming, logging and remote control",
-      "Raspberry Pi deployment for field-ready operation"
+      "UART real-time bridge",
+      "ROS 2 nodes for streaming and logging",
+      "Field deployment on Raspberry Pi"
     ],
     tags: [
       { name: "ROS2" },
-      { name: "Python", icon: "devicon-python-plain" },
       { name: "Linux", icon: "devicon-linux-plain" }
     ],
     url: "https://github.com/CrissCCL/Temp_ControlMod_ROS_integration",
@@ -64,57 +62,54 @@ const projects = [
 
   {
     title: "UAV Power Stage PCB",
+    thumb: "/img/power.jpg",
     desc: "Custom power electronics and regulation board.",
-    impact: "Modular power architecture improving reliability and electrical isolation in UAV systems.",
+    impact: "Reliable modular power architecture for UAV electronics.",
     highlights: [
-      "High-side smart switching with BTS50005 protection",
-      "Buck regulation for low-voltage electronics and sensors",
-      "Custom KiCad design with EMI-aware layout and grounding"
+      "High-side smart switching protection",
+      "Buck regulation for avionics",
+      "EMI-aware PCB layout"
     ],
     tags: [
       { name: "KiCad" },
-      { name: "PCB" },
-      { name: "Hardware" }
+      { name: "PCB" }
     ],
     url: "https://github.com/CrissCCL/UAV_PowerStage",
   },
 
   {
     title: "Digital Control & ARX Identification",
+    thumb: "/img/arx.png",
     desc: "System modeling and control design in MATLAB.",
-    impact: "Industrial-style workflow for data-driven modeling and controller design.",
+    impact: "Data-driven workflow for plant identification and controller tuning.",
     highlights: [
-      "ARX/ARMAX/BJ model identification from real plant data",
-      "Closed-loop PI/PID tuning and robustness analysis",
-      "Simulation-to-experiment validation pipeline"
+      "ARX/ARMAX modeling",
+      "PI/PID tuning",
+      "Simulation-to-experiment validation"
     ],
     tags: [
-      { name: "MATLAB" },
-      { name: "System ID" }
+      { name: "MATLAB" }
     ],
     url: "https://github.com/CrissCCL/Digital_ControlSimARX",
   },
 
   {
     title: "Flotation Column Control — LabVIEW HMI",
+    thumb: "/img/flotation.png",
     desc: "Industrial SCADA-style interface and MIMO PID control.",
-    impact: "Supervisory control system for pilot-scale mineral processing experiments.",
+    impact: "Supervisory control system for pilot-scale mineral processing.",
     highlights: [
-      "Decoupled MIMO PID control strategy",
-      "LabVIEW HMI for monitoring, alarms and actuation",
-      "Industrial-style data acquisition and supervision"
+      "Decoupled MIMO PID",
+      "LabVIEW HMI",
+      "Industrial DAQ integration"
     ],
     tags: [
-      { name: "LabVIEW" },
-      { name: "PID" },
-      { name: "Industrial" }
+      { name: "LabVIEW" }
     ],
     url: "https://github.com/CrissCCL/FLotation_Column_control_HMI",
   }
 
 ];
-
-
 
 
 ---
