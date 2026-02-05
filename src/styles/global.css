@@ -52,7 +52,7 @@ body{
   right:-20px;
   bottom:-40px;
   height:520px;
-  opacity:.07;
+  opacity: 0.1;
   pointer-events:none;
   z-index:0;
 }
