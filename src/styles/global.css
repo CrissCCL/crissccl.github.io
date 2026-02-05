@@ -51,10 +51,10 @@ h2{ margin:0; font-size:1.35rem; }
   border-radius:18px; border:1px solid var(--line);
   background: linear-gradient(180deg, rgba(17,24,39,.78), rgba(15,23,42,.70));
   text-decoration:none; color:inherit;
-  transition: transform .10s ease, border-color .10s ease;
+    transition: transform .18s ease, box-shadow .18s ease;
   min-height: 150px;
 }
-.card:hover{ transform: translateY(-2px); border-color: rgba(96,165,250,.55); }
+.card:hover{  transform: translateY(-6px); box-shadow: 0 14px 34px rgba(0,0,0,.45); border-color: rgba(96,165,250,.55); }
 @media (max-width: 900px){ .card{ grid-column: span 12; } h1{ font-size:1.8rem; } }
 .cardTop{ display:flex; align-items:center; gap:10px; margin-bottom:10px; }
 .dot{ width:10px; height:10px; border-radius:999px; background: var(--accent2); box-shadow: 0 0 0 4px rgba(34,197,94,.12); }
