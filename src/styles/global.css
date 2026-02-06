@@ -86,7 +86,7 @@ h1{
 
 .cta{
   display:flex;
-  gap:10px;
+  gap:8px;
   justify-content:center;
   flex-wrap:wrap;
   margin-top:16px;
